@@ -1,0 +1,22 @@
+*{
+    font-family: Arial;
+}
+button{
+    border-radius: 50px;
+    width: 160px;
+    height: 30px;
+    background-color: #9C9C9C;
+    border-style: hidden;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px 1.5px rgb(66, 66, 66);
+}
+button:hover{
+    background-color: #FFD700;
+    font-weight: bold;
+}
+
+.container { 
+    width: 200px; 
+    margin-left: auto;
+    margin-right: auto; 
+}

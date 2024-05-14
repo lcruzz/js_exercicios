@@ -1,0 +1,9 @@
+input, button{
+    border-radius: 8px;
+}
+button:hover{
+    background-color: rgb(101, 152, 228);
+}
+p, h3{
+    font-family: Arial;
+}
