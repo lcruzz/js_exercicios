@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senha</title>
+</head>
+<body>
+    <div>
+        <img src="img/desligada.jpg" alt="Uma lampada apagada" id="img">
+        Digite sua senha: <input type="password" id="senha">
+        <button onclick="acender()" id="bnt">Interrupitor</button>
+    </div>
+    <script>
+        function acender(){
+            let img = document.getElementById("img")
+            let s = document.getElementById("senha").value
+            if (s == "1234"){
+                if(img.src.match("img/desligada.jpg")){
+                    img.src = ("img/acesa.png")
+                }
+                else{
+                    img.src = ("img/desligada.jpg")
+                }
+            }
+            else{
+                img.src = ("img/quebrada.jpg")
+            }
+        }
+    </script>
+</body>
+</html>

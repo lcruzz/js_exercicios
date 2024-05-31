@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato</title>
+
+    <style>
+        *{
+            font-family: Arial;
+        }
+        input{
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="pai">
+        <div>
+            <h2>Preencha os dados</h2>
+            <Label>Nome:</Label><br>
+            <input type="text" id="nome" placeholder="Digite seu nome:" onkeypress="digitar()"><br><br>
+
+            <Label>Rg:</Label><br>
+            <input type="text" id="rg" placeholder="Informe o número do seu rg:" onkeypress="digitar()"><br><br>
+
+            <Label>CPF:</Label><br>
+            <input type="text" id="cpf" placeholder="Informe seu CPF:" onkeypress="digitar()"><br><br>
+            
+            <Label>Profissão:</Label><br>
+            <input type="text" id="profissao" placeholder="Informe sua profissão:" onkeypress="digitar()"><br><br>
+            
+            <Label>Endereço:</Label><br>
+            <input type="text" id="endereco" placeholder="Informe o seu endereço:" onkeypress="digitar()">
+        </div>
+        <div class="">
+            <h2>Contrato</h2>
+            <p id="ctt">Eu, <span id="nome1"></span>, com o RG, <span id="rg1"></span>, e o CPF, <span id="cpf1"></span>, tendo a profissão de <span id="profi"></span> e com o endereço <span id="ende"></span>, estou ciente dos termos de contrato de estágio que tenho que cumprir.</p>
+        </div>
+    </div>
+    
+    <script src="js/contrato.js"></script>
+</body>
+</html>

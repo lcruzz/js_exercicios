@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Maior</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+    <fieldset>
+        Informe o primeiro número <input type="text" id="num1" class="formulario"> <br><br>
+        Informe o segundo número <input type="text" id="num2" class="formulario"> <br><br>
+        Informe o terceiro número <input type="text" id="num3" class="formulario"> <br><br>
+        <button onclick="numeros()">Clique aqui!</button>
+        
+        <p id="numero"></p>
+    </fieldset>
+
+    <script>
+        function numeros(){
+            let num1 = +document.getElementById("num1").value
+            let num2 = +document.getElementById("num2").value
+            let num3 = +document.getElementById("num3").value
+
+            if ((num1 > num2) && (num1 > num3)){
+                document.getElementById("numero").innerHTML = (num1 + " é o maior número.")
+            }
+                
+            else if ((num2 > num1) && (num2 > num3)){
+                document.getElementById("numero").innerHTML = (num2 + " é o maior número.")
+            }
+
+            else if ((num3 > num1) && (num3 > num2)){
+                document.getElementById("numero").innerHTML = (num3 + " é o maior número.")
+            }
+            document.getElementById("num1").value = ""
+            document.getElementById("num2").value = ""
+            document.getElementById("num3").value = ""
+        }
+    </script>    
+</body>
+</html>

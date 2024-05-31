@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+
+    <style>
+        *{
+            font-family: Arial, sans-serif;
+        }
+        input{
+            border-radius: 5px;
+        }
+        #ano_nasc{
+            width: 200px;
+        }
+        button{
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+    Nome: <input type="text" id="nome" placeholder="Digite seu nome"><br><br>
+    Ano de nascimento: <input type="text" id="ano_nasc" placeholder="Informe o ano que você nasceu"><br><br>
+    <button onclick="site()">Enviar</button>
+    <p>Olá <span id="nome1"></span> seja bem vindo(a/e) ao site! <span id="msg"></span></p>
+
+    <script>
+        function site(){
+            let nome = document.getElementById("nome").value
+            let ano_nasc = +document.getElementById("ano_nasc").value
+            let data = new Date()
+            let ano = data.getFullYear()
+            let idade = ano - ano_nasc
+            let im_par = ""
+            if (idade%2==0){
+                im_par = "sua idade é um número par"
+            }
+            else{
+                im_par = "sua idade é um número impar"
+            }
+            document.getElementById("nome1").innerHTML = nome
+            document.getElementById("msg").innerHTML = `Você tem ${idade} anos e ${im_par}.`
+        }
+    </script>
+</body>
+</html>

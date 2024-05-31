@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vota vota e confirma</title>
+    <link rel="stylesheet" type="text/css" href="css/input.css">
+</head>
+<body>
+    Nome <input type="text" id="nome" placeholder=" Digite seu nome"> <br><br>
+    Nascimento <input type="text" id="nasc" placeholder=" Digite seu ano de nascimento"> <br><br>
+    <button onclick="votacao()">Enviar</button>
+    <p id="titulo"></p>
+
+    <script>
+        function votacao(){
+            let nome = document.getElementById("nome").value
+            let ano_nasc = +document.getElementById("nasc").value
+            let idade = 2024 - ano_nasc
+            
+
+            if ((idade >= 16) && (idade < 18)){
+                document.getElementById("titulo").innerHTML = "Olá, " +nome+ "! Você ja pode tirar seu título. Não é obrigado a votar."
+            }
+            else if ((idade >= 18) && (idade <= 65)){
+                document.getElementById("titulo").innerHTML = "Olá, " +nome+ "! Você tem " +idade+ " anos. É obrigado a votar."
+            }
+            else if ((idade < 65)){
+                document.getElementById("titulo").innerHTML = "Olá, " +nome+ "! Você tem " +idade+ " anos. Não é obrigado a votar."
+            }
+            else{
+                document.getElementById("titulo").innerHTML = "Olá, " +nome+ "! Você tem " +idade+ " anos. Não pode votar."
+            }
+            document.getElementById("ano").value = ""
+            document.getElementById("nasc").value = ""
+        }
+    </script>
+</body>
+</html>

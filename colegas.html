@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Informática</title>
+
+    <style>
+        *{
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    <p id="num_alunos"></p>
+    <p id="nomes"></p>
+
+    <script>
+        let myHTML = '<ol>'
+        let colegas = ['Alan',' Alex',' clazinhoinhoinho',' Ananda',' Antonia',' Cainã',' David',' Davi',' Derek',' Diogo',' Eduardo',' Kellynha Lyegeinha',' Fº Marcos',' Geovana',' Geraldo',' Guilherme',' Gustavo',' Havilla',' Heliêvyson',' Heloisa',' Hugo',' Ivaneudo',' João Vitor',' Jônatas',' Kauã',' Kaylon',' Kelly',' Lin',' DUDUZIN',' Márcio',' Maduh',' Mª Isabelly',' Mª Lígia',' Lívia',' Pamela',' Paulo Flávio',' Paulo Martinho',' Pedro Lucas Gois Coelho de Queiroz',' Ravi',' Tiago']
+        colegas.forEach(colegas => myHTML += `<li>${colegas}</li>`)
+        document.getElementById("num_alunos").innerHTML = `O segundo informática tem ${colegas.length} alunos.`        
+        document.getElementById("nomes").innerHTML = myHTML += `</ol>`        
+        
+    </script>
+</body>
+</html>

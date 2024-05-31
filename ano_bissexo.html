@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano bissexto</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+    <fieldset>kkkkkk
+        <h3>Descubra se o ano é bissexto!</h3>
+        Ano <input type="text" id="ano" placeholder=" Informe o ano" class="formulario"> <br><br>
+        
+        <button onclick="descubra()">Clique aqui!</button>
+        <p id="anob"></p>
+    </fieldset>
+
+    <script>
+        function descubra(){
+            let ano = +document.getElementById("ano").value
+            
+            if ((ano%4==0 && ano%100!=0) || (ano%400==0)){
+                document.getElementById("anob").innerHTML = (ano + " é um ano bissexto.")
+            }
+                
+            else{
+                document.getElementById("anob").innerHTML = (ano + " não é um ano bissexto")
+            }
+            document.getElementById("ano").value = ""
+        }
+    </script>    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fundo</title>
+
+    <style>
+        *{
+            font-family: Arial;
+        }
+        button{
+            border-radius: 5px;
+        }
+        #azul:hover{
+            background-color: #87CEFA;
+        }
+        #vermelho:hover{
+            background-color: #e42e2e;
+            color: white;
+        }
+        #rosa:hover{
+            background-color: #ff8bcf;
+        }
+        #preto:hover{
+            background-color: #000000;
+            color: white;
+        }
+        #branco:hover{
+            background-color: #c1c1c1;
+        }
+        
+    </style>
+</head>
+<body>
+    <h3 id="h3">Mude a cor do plano de fundo!</h3>
+    <button onclick="fundo(1)" id="azul">Azul</button>
+    <button onclick="fundo(2)" id="vermelho">Vermelho</button>
+    <button onclick="fundo(3)" id="rosa">Rosa</button>
+    <button onclick="fundo(4)" id="preto">Preto</button>
+    <button onclick="fundo(5)" id="branco">Branco</button>
+
+    <script>
+        function fundo(i){
+            if (i == 1){
+                document.body.style.backgroundColor = "#0000FF"
+                document.getElementById("h3").style.color = "#FFFFFF"
+            }
+            else if (i == 2){
+                document.body.style.backgroundColor = "#FF0000"
+                document.getElementById("h3").style.color = "#FFFFFF"
+            }
+            else if (i == 3){
+                document.body.style.backgroundColor = "#FF3AAD"
+                document.getElementById("h3").style.color = "#000000"
+            }
+            else if (i == 4){
+                document.body.style.backgroundColor = "#000000"
+                document.getElementById("h3").style.color = "#FFFFFF"
+            }
+            else if (i == 5){
+                document.body.style.backgroundColor = "#FFFFFF"
+                document.getElementById("h3").style.color = "#000000"
+            }
+        }
+    </script>    
+</body>
+</html>

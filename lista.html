@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+    <fieldset>
+        <input type="text" id="lista" class="formulario" placeholder="Digite o que quer colocar na lista"> <br><br>
+        <button onclick="adicionar()">Adicionar à lista</button>
+        <button onclick="remover()">Remover da lista</button>
+        <button onclick="resetar()">Resetar a lista</button>
+        
+        <p id="list"></p>
+    </fieldset>
+
+    <script>
+        let lista = [""]
+
+        function adicionar(){
+            let add = document.getElementById("lista").value
+
+            lista.push(add)
+            document.getElementById("list").innerHTML = lista.join("<br> - ")
+            document.getElementById("lista").value = ""
+        }
+
+        function remover(){
+            lista.pop()
+            document.getElementById("list").innerHTML = lista.join("<br> - ")
+        }
+
+        function resetar(){
+            document.getElementById("list").innerHTML = lista = ""
+        }
+    </script>    
+</body>
+</html>

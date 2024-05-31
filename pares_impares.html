@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares e Impares</title>
+</head>
+<body>
+    <p id="list"></p>
+
+    <script>
+        let lista = [""]
+        let contador = 0
+
+        while (contador <= 50){
+            if (contador%2==0){
+                lista.push(contador)
+                document.querySelector("#list").innerHTML = lista.join("<br> - ")
+            }
+            contador++
+        }
+    </script>
+</body>
+</html>

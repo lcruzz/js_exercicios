@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+    <fieldset>
+        <input type="text" id="h2" class="formulario" placeholder="Digite o título da lista"> <br><br>
+        <button onclick="adicionar(1)">Adicionar um título à lista</button>
+        <button onclick="adicionar(2)">Remover o título à lista</button> <br><br>
+
+        <input type="text" id="lista" class="formulario" placeholder="Digite o que quer colocar na lista"> <br><br>
+        <button onclick="adicionar(3)">Adicionar à lista</button>
+        <button onclick="adicionar(4)">Remover da lista</button>
+        <button onclick="adicionar(5)">Resetar a lista</button>
+        
+        <h2><span id="titulo"></span></h2>
+        <p id="list"></p>
+    </fieldset>
+
+    <script>
+        let lista = [""]
+        let titulo = ""
+
+        function adicionar(i){
+            let add = document.querySelector("#lista").value
+            let add_h1 = document.querySelector("#h2").value
+
+            if(i == 1){
+                titulo = add_h1
+                document.querySelector("#titulo").innerHTML = titulo
+                document.querySelector("#h2").value = ""
+            }
+            else if(i == 2){
+                document.querySelector("#titulo").innerHTML = titulo = ""
+            }
+            else if(i == 3){
+                lista.push(add)
+                document.querySelector("#list").innerHTML = lista.join("<br> - ")
+                document.querySelector("#lista").value = ""
+            }
+            else if(i == 4){
+                lista.pop()
+                document.querySelector("#list").innerHTML = lista.join("<br> - ")
+            }
+            else if(i == 5){
+                document.querySelector("#list").innerHTML = lista = ""
+            }
+        }
+    </script>    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    
+     Digite sua média:<input type="text" id="Media"><br><br>
+     <button onclick="media()">Clique aqui!</button>
+     <p id="aprovacao"></p>
+
+     <script>
+        function media(){
+            let media = document.getElementById("Media").value
+            if ((media >= 6) && (media <= 10)){
+                document.getElementById("aprovacao").innerHTML = ("Parabéns! Você foi aprovado.")
+            }
+            else if ((media >= 4) && (media < 6)){
+                document.getElementById("aprovacao").innerHTML = ("Você está de recuperação.")
+            }
+            else if((media > 10) || (media < 0)){
+                document.getElementById("aprovacao").innerHTML = ("Esta média não existe.")
+            }
+            else{
+                document.getElementById("aprovacao").innerHTML = ("Você foi reprovado.")
+            }
+        
+    }
+     </script>
+</body>
+</html>
