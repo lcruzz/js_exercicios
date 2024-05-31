@@ -3,12 +3,13 @@
 }
 button{
     border-radius: 50px;
-    width: 160px;
+    width: 140px;
     height: 30px;
     background-color: #9C9C9C;
     border-style: hidden;
     font-weight: bold;
     box-shadow: 2px 2px 5px 1.5px #424242;
+    font-size: 13px;
 }
 button:hover{
     background-color: #FFD700;
@@ -16,7 +17,13 @@ button:hover{
 }
 
 .container { 
-    width: 200px; 
-    margin-left: auto;
-    margin-right: auto; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+img{
+    height: 200px;
+    width: 200px;
 }
