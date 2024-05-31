@@ -3,30 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senha</title>
+    <title>Lampada com senha</title>
+
+    <link rel="stylesheet" href="css/lamp_senha.css">
 </head>
 <body>
-    <div>
-        <img src="img/desligada.jpg" alt="Uma lampada apagada" id="img">
-        Digite sua senha: <input type="password" id="senha">
-        <button onclick="acender()" id="bnt">Interrupitor</button>
-    </div>
-    <script>
-        function acender(){
-            let img = document.getElementById("img")
-            let s = document.getElementById("senha").value
-            if (s == "1234"){
-                if(img.src.match("img/desligada.jpg")){
-                    img.src = ("img/acesa.png")
-                }
-                else{
-                    img.src = ("img/desligada.jpg")
-                }
-            }
-            else{
-                img.src = ("img/quebrada.jpg")
-            }
-        }
-    </script>
+    <h3 id="h3">Digite a senha para acender a lampada</h3>
+    <img src="img/lampada_apagada.png" id="img">
+    Senha: <input type="password" id="senha" placeholder="Digite a senha"> <br>
+    <button onclick="interruptor()" id="btn">INTERRUPTOR</button>
+    
+    <script src="js/lamp_senha.js"></script>
 </body>
 </html>
