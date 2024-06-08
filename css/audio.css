@@ -1,0 +1,18 @@
+*{
+    font-family: Arial;
+    font-size: 20px;
+}
+input, button{
+    border-radius: 5px;
+}
+input{
+    width: 400px;
+}
+button:hover{
+    background-color: #AA86CB;
+    font-weight: bold;
+}
+button{
+    width: 80px;
+    cursor: pointer;
+}
